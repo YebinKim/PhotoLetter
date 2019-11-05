@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0p-DP-QAv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Letter List View Controller-->
+        <scene sceneID="zem-SV-zcF">
+            <objects>
+                <viewController id="Y0p-DP-QAv" customClass="LetterListViewController" customModule="PhotoLetter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mEx-ek-vhR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26c-cL-uKo" customClass="GradientView" customModule="PhotoLetter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4L-EG-JT0" customClass="ShadowView" customModule="PhotoLetter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mym-2m-rS8">
+                                                <rect key="frame" x="24" y="20.5" width="23" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mym-2m-rS8" secondAttribute="height" multiplier="23:22" id="67U-eG-JVd"/>
+                                                </constraints>
+                                                <state key="normal" image="icMenu"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT8-6A-WPD">
+                                                <rect key="frame" x="329.5" y="19.5" width="23" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="vT8-6A-WPD" secondAttribute="height" multiplier="1:1" id="xqj-Di-0OB"/>
+                                                </constraints>
+                                                <state key="normal" image="icWrite"/>
+                                                <connections>
+                                                    <segue destination="idj-Z1-zjT" kind="show" id="Yyo-lW-H9V"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vT8-6A-WPD" secondAttribute="bottom" constant="17.5" id="0DN-UF-LGK"/>
+                                            <constraint firstAttribute="bottom" secondItem="mym-2m-rS8" secondAttribute="bottom" constant="17.5" id="Dmz-3V-BK6"/>
+                                            <constraint firstAttribute="trailing" secondItem="vT8-6A-WPD" secondAttribute="trailing" constant="22.5" id="TPz-jY-BHq"/>
+                                            <constraint firstItem="mym-2m-rS8" firstAttribute="top" secondItem="v4L-EG-JT0" secondAttribute="top" constant="20.5" id="dbL-YY-NaR"/>
+                                            <constraint firstItem="vT8-6A-WPD" firstAttribute="top" secondItem="v4L-EG-JT0" secondAttribute="top" constant="19.5" id="faA-Oj-Y2M"/>
+                                            <constraint firstItem="mym-2m-rS8" firstAttribute="leading" secondItem="v4L-EG-JT0" secondAttribute="leading" constant="24" id="jXJ-sw-gW2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v4L-EG-JT0" secondAttribute="trailing" id="PIr-Xc-7DQ"/>
+                                    <constraint firstItem="v4L-EG-JT0" firstAttribute="leading" secondItem="26c-cL-uKo" secondAttribute="leading" id="V93-OO-ddR"/>
+                                    <constraint firstItem="v4L-EG-JT0" firstAttribute="top" secondItem="26c-cL-uKo" secondAttribute="top" id="hhC-WT-0WL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="26c-cL-uKo" firstAttribute="top" secondItem="bF4-IC-2Ld" secondAttribute="top" id="BuU-Zg-TWQ"/>
+                            <constraint firstItem="26c-cL-uKo" firstAttribute="trailing" secondItem="bF4-IC-2Ld" secondAttribute="trailing" id="XKX-33-4iR"/>
+                            <constraint firstItem="26c-cL-uKo" firstAttribute="bottom" secondItem="bF4-IC-2Ld" secondAttribute="bottom" id="nhe-Xr-fkA"/>
+                            <constraint firstItem="26c-cL-uKo" firstAttribute="leading" secondItem="bF4-IC-2Ld" secondAttribute="leading" id="qXQ-Zh-Qsj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bF4-IC-2Ld"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuButton" destination="mym-2m-rS8" id="rbZ-50-mks"/>
+                        <outlet property="writeButton" destination="vT8-6A-WPD" id="YGr-NT-kip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwJ-sB-8QM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.400000000000006" y="168.6656671664168"/>
+        </scene>
+        <!--Photo Edit View Controller-->
+        <scene sceneID="JPe-Rf-r2V">
+            <objects>
+                <viewController id="idj-Z1-zjT" customClass="PhotoEditViewController" customModule="PhotoLetter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IqJ-c5-4Zf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjz-eG-Bkv" customClass="GradientView" customModule="PhotoLetter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cl-2c-D1b" customClass="ShadowView" customModule="PhotoLetter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAv-JL-6RU">
+                                                <rect key="frame" x="328.5" y="20" width="23" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nAv-JL-6RU" secondAttribute="height" multiplier="23:22" id="cra-99-Wxq"/>
+                                                </constraints>
+                                                <state key="normal" image="icCheck"/>
+                                                <connections>
+                                                    <segue destination="SzP-1G-9t0" kind="show" id="nUB-fI-Wnm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GK-Bj-9Hu">
+                                                <rect key="frame" x="24.5" y="19" width="13" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9GK-Bj-9Hu" secondAttribute="height" multiplier="13:22" id="coT-U2-Yh1"/>
+                                                </constraints>
+                                                <state key="normal" image="icBack"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="idj-Z1-zjT" eventType="touchUpInside" id="zEe-gp-NL9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="nAv-JL-6RU" secondAttribute="trailing" constant="23.5" id="BFl-j3-SGJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="nAv-JL-6RU" secondAttribute="bottom" constant="18" id="CPj-oy-wbU"/>
+                                            <constraint firstAttribute="bottom" secondItem="9GK-Bj-9Hu" secondAttribute="bottom" constant="19" id="D4G-Zx-NPm"/>
+                                            <constraint firstItem="nAv-JL-6RU" firstAttribute="top" secondItem="1Cl-2c-D1b" secondAttribute="top" constant="20" id="Tmn-AA-8rg"/>
+                                            <constraint firstItem="9GK-Bj-9Hu" firstAttribute="leading" secondItem="1Cl-2c-D1b" secondAttribute="leading" constant="24.5" id="jTE-dj-0wl"/>
+                                            <constraint firstItem="9GK-Bj-9Hu" firstAttribute="top" secondItem="1Cl-2c-D1b" secondAttribute="top" constant="19" id="td2-Ok-x3e"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wzb-gt-Wz0">
+                                        <rect key="frame" x="0.0" y="598" width="375" height="49"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.92549019607843142" blue="0.92941176470588238" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <items>
+                                            <tabBarItem title="Add" image="icPhotoAdd" selectedImage="icPhotoAdd" id="exF-cp-JNS"/>
+                                            <tabBarItem title="Ratio" image="icPhotoRatio1" selectedImage="icPhotoRatio1" id="KU5-Mm-6MO"/>
+                                            <tabBarItem title="Filter" image="icPhotoFilter" selectedImage="icPhotoFilter" id="qcT-pg-6ty"/>
+                                            <tabBarItem title="Rotate" image="icPhotoRotate" selectedImage="icPhotoRotate" id="0dh-9H-EL1"/>
+                                        </items>
+                                    </tabBar>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="1Cl-2c-D1b" firstAttribute="leading" secondItem="Wjz-eG-Bkv" secondAttribute="leading" id="3Oe-3V-Qhs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wzb-gt-Wz0" secondAttribute="bottom" id="98g-fg-ggB"/>
+                                    <constraint firstItem="Wzb-gt-Wz0" firstAttribute="leading" secondItem="Wjz-eG-Bkv" secondAttribute="leading" id="9FO-dW-ly0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wzb-gt-Wz0" secondAttribute="trailing" id="Bze-lX-hQk"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Cl-2c-D1b" secondAttribute="trailing" id="tHs-mt-MF2"/>
+                                    <constraint firstItem="1Cl-2c-D1b" firstAttribute="top" secondItem="Wjz-eG-Bkv" secondAttribute="top" id="wVN-gJ-bYL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wjz-eG-Bkv" firstAttribute="trailing" secondItem="3MO-Kn-TPM" secondAttribute="trailing" id="Gcq-se-lar"/>
+                            <constraint firstItem="Wjz-eG-Bkv" firstAttribute="top" secondItem="3MO-Kn-TPM" secondAttribute="top" id="PX3-QU-tf4"/>
+                            <constraint firstItem="Wjz-eG-Bkv" firstAttribute="leading" secondItem="3MO-Kn-TPM" secondAttribute="leading" id="VNY-Dd-97K"/>
+                            <constraint firstItem="Wjz-eG-Bkv" firstAttribute="bottom" secondItem="3MO-Kn-TPM" secondAttribute="bottom" id="z88-wi-Db8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3MO-Kn-TPM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Je-lP-x2D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY2-7l-doP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="169"/>
+        </scene>
+        <!--Letter Write View Controller-->
+        <scene sceneID="r7W-T8-E5R">
+            <objects>
+                <viewController id="SzP-1G-9t0" customClass="LetterWriteViewController" customModule="PhotoLetter" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Odv-VS-EC1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wp-FB-EgL" customClass="GradientView" customModule="PhotoLetter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKG-Xr-UVR" customClass="ShadowView" customModule="PhotoLetter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sib-pS-Hxd">
+                                                <rect key="frame" x="328.5" y="20" width="23" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sib-pS-Hxd" secondAttribute="height" multiplier="23:22" id="C8N-b3-GVE"/>
+                                                </constraints>
+                                                <state key="normal" image="icCheck"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcX-Uj-5C9">
+                                                <rect key="frame" x="24.5" y="19" width="13" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zcX-Uj-5C9" secondAttribute="height" multiplier="13:22" id="Lhi-Pr-rt5"/>
+                                                </constraints>
+                                                <state key="normal" image="icBack"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="SzP-1G-9t0" eventType="touchUpInside" id="mTn-7c-1ax"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="sib-pS-Hxd" secondAttribute="bottom" constant="18" id="15p-6U-CXf"/>
+                                            <constraint firstAttribute="bottom" secondItem="zcX-Uj-5C9" secondAttribute="bottom" constant="19" id="YLj-A3-qZu"/>
+                                            <constraint firstItem="zcX-Uj-5C9" firstAttribute="top" secondItem="pKG-Xr-UVR" secondAttribute="top" constant="19" id="bwG-cV-aJC"/>
+                                            <constraint firstItem="zcX-Uj-5C9" firstAttribute="leading" secondItem="pKG-Xr-UVR" secondAttribute="leading" constant="24.5" id="nM1-f4-vje"/>
+                                            <constraint firstAttribute="trailing" secondItem="sib-pS-Hxd" secondAttribute="trailing" constant="23.5" id="niU-h0-MzC"/>
+                                            <constraint firstItem="sib-pS-Hxd" firstAttribute="top" secondItem="pKG-Xr-UVR" secondAttribute="top" constant="20" id="oAe-zz-KYO"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9X-fG-8vq">
+                                        <rect key="frame" x="0.0" y="598" width="375" height="49"/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.92941176469999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <items>
+                                            <tabBarItem title="Font" image="icWriteText" selectedImage="icWriteText" id="Gkl-lQ-PEr"/>
+                                            <tabBarItem title="Color" image="icWritePalette" selectedImage="icWritePalette" id="0F8-LE-cuH"/>
+                                            <tabBarItem title="Vertical" image="icWriteVertical" selectedImage="icWriteVertical" id="gkh-jy-ZVP"/>
+                                            <tabBarItem title="Left" image="icWriteAlign1" selectedImage="icWriteAlign1" id="E5h-vI-vuv"/>
+                                        </items>
+                                    </tabBar>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="pKG-Xr-UVR" firstAttribute="leading" secondItem="5Wp-FB-EgL" secondAttribute="leading" id="0YE-vn-Ifj"/>
+                                    <constraint firstAttribute="trailing" secondItem="pKG-Xr-UVR" secondAttribute="trailing" id="KhF-yS-4EF"/>
+                                    <constraint firstItem="B9X-fG-8vq" firstAttribute="leading" secondItem="5Wp-FB-EgL" secondAttribute="leading" id="c6a-Yf-voy"/>
+                                    <constraint firstItem="pKG-Xr-UVR" firstAttribute="top" secondItem="5Wp-FB-EgL" secondAttribute="top" id="pdY-9I-fw2"/>
+                                    <constraint firstAttribute="trailing" secondItem="B9X-fG-8vq" secondAttribute="trailing" id="t8d-94-RAU"/>
+                                    <constraint firstAttribute="bottom" secondItem="B9X-fG-8vq" secondAttribute="bottom" id="yfr-Gi-5GU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Wp-FB-EgL" firstAttribute="bottom" secondItem="QR8-gB-slK" secondAttribute="bottom" id="9En-mA-0T1"/>
+                            <constraint firstItem="5Wp-FB-EgL" firstAttribute="leading" secondItem="QR8-gB-slK" secondAttribute="leading" id="LCj-fX-Nll"/>
+                            <constraint firstItem="5Wp-FB-EgL" firstAttribute="top" secondItem="QR8-gB-slK" secondAttribute="top" id="QuV-sK-oGH"/>
+                            <constraint firstItem="5Wp-FB-EgL" firstAttribute="trailing" secondItem="QR8-gB-slK" secondAttribute="trailing" id="Sbc-Pn-SXx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QR8-gB-slK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DJT-bq-qS6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30d-mT-9vJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629.5999999999999" y="168.6656671664168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icBack" width="12.5" height="21.5"/>
+        <image name="icCheck" width="23" height="17"/>
+        <image name="icMenu" width="23" height="18.5"/>
+        <image name="icPhotoAdd" width="29" height="29"/>
+        <image name="icPhotoFilter" width="30.5" height="29"/>
+        <image name="icPhotoRatio1" width="29" height="29"/>
+        <image name="icPhotoRotate" width="32.5" height="29"/>
+        <image name="icWrite" width="22.5" height="22.5"/>
+        <image name="icWriteAlign1" width="30.5" height="23"/>
+        <image name="icWritePalette" width="28.5" height="28.5"/>
+        <image name="icWriteText" width="29" height="26"/>
+        <image name="icWriteVertical" width="29" height="26.5"/>
+    </resources>
+</document>
