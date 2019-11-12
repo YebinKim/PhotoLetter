@@ -101,17 +101,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjz-eG-Bkv" customClass="GradientView" customModule="PhotoLetter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ml6-WN-bHe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuI-h6-79Z">
-                                                <rect key="frame" x="-0.37241796020488571" y="-0.24532246958614601" width="375.19223905877573" height="647.17338992304155"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cl-2c-D1b" customClass="ShadowView" customModule="PhotoLetter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
@@ -171,6 +160,21 @@
                                         </items>
                                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tabBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ml6-WN-bHe">
+                                        <rect key="frame" x="0.0" y="136" width="375" height="375"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KuI-h6-79Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KuI-h6-79Z" secondAttribute="trailing" id="23D-xG-Y3d"/>
+                                            <constraint firstItem="KuI-h6-79Z" firstAttribute="leading" secondItem="ml6-WN-bHe" secondAttribute="leading" id="46y-Pz-JYh"/>
+                                            <constraint firstAttribute="bottom" secondItem="KuI-h6-79Z" secondAttribute="bottom" id="76F-DZ-cr5"/>
+                                            <constraint firstItem="KuI-h6-79Z" firstAttribute="top" secondItem="ml6-WN-bHe" secondAttribute="top" id="Rfe-0Z-yMB"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -178,7 +182,11 @@
                                     <constraint firstAttribute="bottom" secondItem="Wzb-gt-Wz0" secondAttribute="bottom" id="98g-fg-ggB"/>
                                     <constraint firstItem="Wzb-gt-Wz0" firstAttribute="leading" secondItem="Wjz-eG-Bkv" secondAttribute="leading" id="9FO-dW-ly0"/>
                                     <constraint firstAttribute="trailing" secondItem="Wzb-gt-Wz0" secondAttribute="trailing" id="Bze-lX-hQk"/>
+                                    <constraint firstAttribute="trailing" secondItem="ml6-WN-bHe" secondAttribute="trailing" id="CxW-pU-4tk"/>
+                                    <constraint firstItem="ml6-WN-bHe" firstAttribute="centerY" secondItem="Wjz-eG-Bkv" secondAttribute="centerY" id="FDO-OY-Xag"/>
+                                    <constraint firstItem="ml6-WN-bHe" firstAttribute="top" secondItem="Wjz-eG-Bkv" secondAttribute="top" constant="136" id="fAG-cK-etD"/>
                                     <constraint firstAttribute="trailing" secondItem="1Cl-2c-D1b" secondAttribute="trailing" id="tHs-mt-MF2"/>
+                                    <constraint firstItem="ml6-WN-bHe" firstAttribute="leading" secondItem="Wjz-eG-Bkv" secondAttribute="leading" id="uEh-b2-62n"/>
                                     <constraint firstItem="1Cl-2c-D1b" firstAttribute="top" secondItem="Wjz-eG-Bkv" secondAttribute="top" id="wVN-gJ-bYL"/>
                                 </constraints>
                             </view>
@@ -196,6 +204,7 @@
                     <connections>
                         <outlet property="photoTabBar" destination="Wzb-gt-Wz0" id="A5n-lA-iRc"/>
                         <outlet property="photoView" destination="KuI-h6-79Z" id="qqk-hE-Vgi"/>
+                        <outlet property="photoViewTopConstraint" destination="fAG-cK-etD" id="zz2-fA-HYO"/>
                         <outlet property="ratioView" destination="ml6-WN-bHe" id="oLO-wV-ydH"/>
                     </connections>
                 </viewController>
