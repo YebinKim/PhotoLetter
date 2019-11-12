@@ -10,5 +10,6 @@ import Foundation
 
 // MARK: - Letter
 class Letter {
+    var ratio: Int = 0
     
 }

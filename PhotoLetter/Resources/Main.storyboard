@@ -101,6 +101,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjz-eG-Bkv" customClass="GradientView" customModule="PhotoLetter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ml6-WN-bHe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuI-h6-79Z">
+                                                <rect key="frame" x="-0.37241796020488571" y="-0.24532246958614601" width="375.19223905877573" height="647.17338992304155"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cl-2c-D1b" customClass="ShadowView" customModule="PhotoLetter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
@@ -154,10 +165,11 @@
                                         <color key="backgroundColor" red="0.91764705882352937" green="0.92549019607843142" blue="0.92941176470588238" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <items>
                                             <tabBarItem title="Add" image="icPhotoAdd" selectedImage="icPhotoAdd" id="exF-cp-JNS"/>
-                                            <tabBarItem title="Ratio" image="icPhotoRatio1" selectedImage="icPhotoRatio1" id="KU5-Mm-6MO"/>
-                                            <tabBarItem title="Filter" image="icPhotoFilter" selectedImage="icPhotoFilter" id="qcT-pg-6ty"/>
-                                            <tabBarItem title="Rotate" image="icPhotoRotate" selectedImage="icPhotoRotate" id="0dh-9H-EL1"/>
+                                            <tabBarItem tag="1" title="Ratio" image="icPhotoRatio1" selectedImage="icPhotoRatio1" id="KU5-Mm-6MO"/>
+                                            <tabBarItem tag="2" title="Filter" image="icPhotoFilter" selectedImage="icPhotoFilter" id="qcT-pg-6ty"/>
+                                            <tabBarItem tag="3" title="Rotate" image="icPhotoRotate" selectedImage="icPhotoRotate" id="0dh-9H-EL1"/>
                                         </items>
+                                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tabBar>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -181,10 +193,15 @@
                         <viewLayoutGuide key="safeArea" id="3MO-Kn-TPM"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Je-lP-x2D"/>
+                    <connections>
+                        <outlet property="photoTabBar" destination="Wzb-gt-Wz0" id="A5n-lA-iRc"/>
+                        <outlet property="photoView" destination="KuI-h6-79Z" id="qqk-hE-Vgi"/>
+                        <outlet property="ratioView" destination="ml6-WN-bHe" id="oLO-wV-ydH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY2-7l-doP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="169"/>
+            <point key="canvasLocation" x="852" y="168.6656671664168"/>
         </scene>
         <!--Letter Write View Controller-->
         <scene sceneID="r7W-T8-E5R">
@@ -197,6 +214,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wp-FB-EgL" customClass="GradientView" customModule="PhotoLetter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV5-of-Beh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKG-Xr-UVR" customClass="ShadowView" customModule="PhotoLetter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
@@ -251,6 +272,7 @@
                                             <tabBarItem title="Vertical" image="icWriteVertical" selectedImage="icWriteVertical" id="gkh-jy-ZVP"/>
                                             <tabBarItem title="Left" image="icWriteAlign1" selectedImage="icWriteAlign1" id="E5h-vI-vuv"/>
                                         </items>
+                                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tabBar>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
