@@ -17,6 +17,7 @@ final class PhotoEditViewController: UIViewController {
     @IBOutlet var photoView: UIImageView!
     @IBOutlet var photoViewTopConstraint: NSLayoutConstraint!
     @IBOutlet var photoTabBar: UITabBar!
+    @IBOutlet var filterCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,8 +93,10 @@ extension PhotoEditViewController: UITabBarDelegate {
             
         } else if(item.tag == 2) {
             print("filter")
+            
         } else if(item.tag == 3) {
-            print("rotate")
+            letter.rotateAngle = (letter.rotateAngle + 1).truncatingRemainder(dividingBy: 4.0)
+            photoRotate(letter.rotateAngle)
         }
     }
     
@@ -118,6 +121,12 @@ extension PhotoEditViewController: UITabBarDelegate {
     func photoRatio(_ halfHeight: CGFloat, _ newHeight: CGFloat) {
         ratioView.frame = CGRect(x: 0 , y: 0, width: self.view.frame.width, height: newHeight)
         photoViewTopConstraint.constant = halfHeight - newHeight / 2.0 + 10 /* safe area 20pt */
+    }
+    
+    func photoRotate(_ rotateAngle: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.photoView.transform = CGAffineTransform(rotationAngle: rotateAngle * (CGFloat.pi / 2.0))
+        })
     }
     
     func changeTabBarItemImage(_ tabBar: UITabBar, _ tag: Int, _ image: String) {

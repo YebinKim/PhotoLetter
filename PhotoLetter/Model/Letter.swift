@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Letter
 class Letter {
     var ratio: Int = 0
-    
+    var rotateAngle: CGFloat = 0
 }
